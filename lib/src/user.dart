@@ -15,6 +15,7 @@ abstract class User extends Equatable {
   const User._({
     this.createdAt,
     this.firstName,
+    this.displayName,
     required this.id,
     this.imageUrl,
     this.lastName,
@@ -27,6 +28,7 @@ abstract class User extends Equatable {
   const factory User({
     int? createdAt,
     String? firstName,
+    String? displayName,
     required String id,
     String? imageUrl,
     String? lastName,
@@ -44,6 +46,9 @@ abstract class User extends Equatable {
 
   /// First name of the user.
   final String? firstName;
+
+  /// Display name of the user.
+  final String? displayName;
 
   /// Unique ID of the user.
   final String id;
@@ -83,6 +88,7 @@ abstract class User extends Equatable {
   User copyWith({
     int? createdAt,
     String? firstName,
+    String? displayName,
     String? id,
     String? imageUrl,
     String? lastName,
@@ -100,6 +106,7 @@ abstract class User extends Equatable {
 class _User extends User {
   const _User({
     super.createdAt,
+    super.displayName,
     super.firstName,
     required super.id,
     super.imageUrl,
@@ -114,6 +121,7 @@ class _User extends User {
   User copyWith({
     dynamic createdAt = _Unset,
     dynamic firstName = _Unset,
+    dynamic displayName = _Unset,
     String? id,
     dynamic imageUrl = _Unset,
     dynamic lastName = _Unset,
